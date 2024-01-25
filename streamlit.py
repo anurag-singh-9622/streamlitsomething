@@ -109,8 +109,12 @@ if ans == a[1]:
     'Sahi hai benchod'
 if ans == a[0] or ans == a[2] or ans == a[3]:
     time.sleep(2)
-    'Tere se na ho payega Benchod'
-    time.sleep(3)
-    'Ja Rajeev Barwe se Puch kar aaa, Betichod'
+    # 'Tere se na ho payega Benchod'
+    audio_file = open('myaudio.ogg', 'rb')
+    audio_bytes = audio_file.read()
+
+    st.audio(audio_bytes, format='audio/ogg', start_time = 0)
+    # time.sleep(3)
+    # 'Ja Rajeev Barwe se Puch kar aaa, Betichod'
 
 
