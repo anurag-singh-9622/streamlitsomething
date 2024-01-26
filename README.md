@@ -1,3 +1,3 @@
 ﻿# streamlitsometing
-Check out below link
-funcheck.streamlit.app
+Check out link
+[funcheck.streamlit.app](https://funcheck.streamlit.app)
