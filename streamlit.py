@@ -98,6 +98,16 @@ ans = st.radio("What is 25% of 1260?", a, None)
 # bar = st.progress(0)
 
 
+def rightaudio(audiopath):
+    audio_file1 = open(audiopath, 'rb')
+    audio_bytes1 = audio_file1.read()
+    st.audio(audio_bytes1, format='audio/ogg', start_time = 0)
+
+@st.cache_data
+def rightimage(imagepath):
+    st.image(imagepath, caption='dancing_boy_meme')
+
+
 if ans == a[1]:
     latest_iteration = st.empty()
     bar = st.progress(0)
@@ -106,10 +116,16 @@ if ans == a[1]:
         latest_iteration.text(f'Loading {i+1}%')
         bar.progress(i+1)
         time.sleep(0.05)
-    audio_file1 = open('myaudio1.ogg', 'rb')
-    audio_bytes1 = audio_file1.read()
-    st.audio(audio_bytes1, format='audio/ogg', start_time = 0)
+    #audio
+    rightaudio("rightanswer.ogg")
+    #image
+    
+    # time.sleep(4.5)
+    # st.image('dance-meme.gif', caption='Sunrise by the mountains')
     # 'Sahi hai benchod'
+    agree = st.checkbox('I agree')
+    if agree:
+        rightimage("dance-meme.gif")
 if ans == a[0] or ans == a[2] or ans == a[3]:
     time.sleep(2)
     # 'Tere se na ho payega Benchod'
