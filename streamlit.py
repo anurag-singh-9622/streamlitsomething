@@ -1,6 +1,8 @@
 import streamlit as st
 import time
 
+st.title("Try this question :smile:")
+
 a = ['215', '315', '351', '265']
 ans = st.radio("What is 25% of 1260?", a, None)
 
