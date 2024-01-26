@@ -31,15 +31,13 @@ if ans == a[1]:
     
     # time.sleep(4.5)
     # st.image('dance-meme.gif', caption='Sunrise by the mountains')
-    # 'Sahi hai benchod'
     agree = st.checkbox('I agree')
     if agree:
         image("dance-meme.gif")
 if ans == a[0] or ans == a[2] or ans == a[3]:
     time.sleep(2)
-    # 'Tere se na ho payega Benchod'
     audio("wronganswer.ogg")
     # time.sleep(3)
-    # 'Ja Rajeev Barwe se Puch kar aaa, Betichod'
+
 
 
